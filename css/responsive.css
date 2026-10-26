@@ -1,0 +1,59 @@
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-copy { width: min(32rem, 46vw); }
+  .hero-vignette { background:
+    linear-gradient(90deg, rgba(3, 10, 31, .9) 0%, rgba(3, 10, 31, .5) 34%, rgba(3, 10, 31, 0) 60%),
+    linear-gradient(0deg, rgba(3, 10, 31, .85) 0%, rgba(3, 10, 31, 0) 22%); }
+  .universe { grid-template-columns: repeat(2, 1fr); }
+  .btn--primary { box-shadow: 0 0 18px rgba(61, 232, 255, .3); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body { font-size: 1rem; }
+  .nav-toggle { display: grid; gap: 5px; place-content: center; width: 2.75rem; height: 2.75rem; background: none; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+  .nav-toggle span { width: 1.2rem; height: 2px; background: var(--ink); transition: transform .25s, opacity .25s; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-menu {
+    position: fixed; top: var(--nav-h); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0;
+    padding: .5rem var(--pad) 1.5rem; background: rgba(3, 10, 31, .96); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
+    transform: translateY(-120%); visibility: hidden; transition: transform .3s ease, visibility .3s;
+  }
+  .nav-menu.is-open { transform: none; visibility: visible; }
+  .nav-menu li { border-bottom: 1px solid var(--line); }
+  .nav-menu li:last-child { border: 0; padding-top: 1rem; }
+  .nav-menu a:not(.btn) { display: block; padding: .9rem 0; border: 0; }
+  .nav-menu .btn { width: 100%; }
+
+  /* Robot sits in the upper part of the canvas; copy occupies the lower part */
+  .hero-copy { width: auto; right: var(--pad); bottom: 3.75rem; }
+  .hero-vignette { background: linear-gradient(0deg, rgba(3, 10, 31, .96) 0%, rgba(3, 10, 31, .75) 38%, rgba(3, 10, 31, 0) 62%); }
+  .phase-1 h1 { font-size: clamp(2.6rem, 13vw, 3.6rem); }
+  .hero-desc { font-size: .98rem; }
+  .cta-row .btn { flex: 1 1 100%; }
+  .scroll-indicator { left: 50%; transform: translateX(-50%); bottom: 1rem; }
+  .scroll-indicator span { display: none; }
+  .phase-text { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+
+  .split, .course-grid, .two-up { grid-template-columns: 1fr; }
+  .course--flip .course-grid > :first-child { order: 0; }
+  .universe { grid-template-columns: 1fr; }
+  .section h2, .course h2 { max-width: none; }
+  .form .btn { width: 100%; justify-self: stretch; }
+}
+
+/* Short landscape phones */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero-copy { bottom: 2.5rem; }
+  .phase-1 h1 { font-size: 2.4rem; }
+  .hero-desc, .scroll-indicator { display: none; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .scroll-indicator { display: none; }
+}

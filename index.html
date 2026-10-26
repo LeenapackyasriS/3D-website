@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BEYCAN | Meet Beybot. Explore Beyond Imagination.</title>
+  <meta name="description" content="Discover robotics, coding, artificial intelligence, and the technology shaping tomorrow with BEYCAN.">
+  <meta name="theme-color" content="#030a1f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Loading screen -->
+  <div id="preloader" role="status" aria-live="polite">
+    <div class="preloader-inner">
+      <span class="wordmark wordmark--lg">BEYCAN</span>
+      <p>Preparing your experience...</p>
+      <div class="preloader-bar" aria-hidden="true"><span id="preloader-fill"></span></div>
+      <p class="preloader-pct"><span id="preloader-pct">0</span>%</p>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="wordmark" href="#home" aria-label="BEYCAN home">BEYCAN</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn--primary btn--sm" href="#contact">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO: pinned, scroll-controlled canvas frame sequence -->
+    <section class="hero" id="home" aria-label="Meet Beybot">
+      <canvas id="hero-canvas" role="img"
+        aria-label="Beybot, a friendly white robot, steps out of a glowing portal and reveals the floating BEYCAN learning universe."></canvas>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <div class="phase phase-1" id="phase-1">
+          <h1>Meet Beybot.</h1>
+          <p class="hero-sub">Explore Beyond Imagination.</p>
+          <p class="hero-desc">Discover robotics, coding, artificial intelligence, and the technology shaping tomorrow with BEYCAN.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#explore" data-action="explore-beybot">Explore Beybot</a>
+            <a class="btn btn--ghost" href="#courses">Discover Courses</a>
+          </div>
+        </div>
+        <p class="phase phase-text" id="phase-2">Your journey into the future begins here.</p>
+        <p class="phase phase-text" id="phase-3">Imagine. Build. Innovate.</p>
+        <p class="phase phase-text" id="phase-4">One universe. Endless possibilities.</p>
+        <div class="phase phase-5" id="phase-5">
+          <p class="phase-text">Discover the world of BEYCAN.</p>
+          <a class="btn btn--primary" href="#about">Continue</a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" id="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span><i></i>
+      </div>
+      <div class="hero-progress" aria-hidden="true"><span id="hero-progress"></span></div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-h">
+      <div class="container split">
+        <div>
+          <h2 id="about-h">A place to make technology feel possible</h2>
+        </div>
+        <div class="prose">
+          <p>BEYCAN is a learning space where curiosity leads. Students explore robotics, code, artificial intelligence and design through hands-on projects, guided by Beybot, our friendly companion for the journey.</p>
+          <p>Every topic starts with something you can touch, test or build. Ideas turn into working prototypes, and prototypes turn into confidence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="explore" aria-labelledby="explore-h">
+      <div class="container">
+        <h2 id="explore-h">Explore our learning universe</h2>
+        <p class="lead">Four worlds, one connected path. Start anywhere and move between them as your interests grow.</p>
+        <div class="universe">
+          <a class="tile tile--cyan" href="#robotics"><h3>Robotics and IoT</h3><p>Build machines that sense and move.</p></a>
+          <a class="tile tile--blue" href="#coding"><h3>Coding and Web Development</h3><p>Write the logic behind apps and sites.</p></a>
+          <a class="tile tile--purple" href="#ai"><h3>Artificial Intelligence and Data</h3><p>Teach computers to find patterns.</p></a>
+          <a class="tile tile--gold" href="#design"><h3>Design and Animation</h3><p>Shape how ideas look and feel.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <div id="courses">
+      <section class="section course course--cyan" id="robotics" aria-labelledby="robotics-h">
+        <div class="container course-grid">
+          <div>
+            <h2 id="robotics-h">Robotics and IoT</h2>
+            <p class="lead">Connect sensors, motors and microcontrollers, then watch your code act in the physical world.</p>
+          </div>
+          <ul class="checks">
+            <li>Circuits, sensors and actuators</li>
+            <li>Programming microcontrollers</li>
+            <li>Connected devices and smart-home ideas</li>
+            <li>Build-and-test robotics challenges</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section course course--blue course--flip" id="coding" aria-labelledby="coding-h">
+        <div class="container course-grid">
+          <div>
+            <h2 id="coding-h">Coding and Web Development</h2>
+            <p class="lead">Learn how software is structured, from your first program to pages people can open in a browser.</p>
+          </div>
+          <ul class="checks">
+            <li>Programming fundamentals and problem solving</li>
+            <li>HTML, CSS and JavaScript</li>
+            <li>Building interactive web projects</li>
+            <li>Debugging and clean-code habits</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section course course--purple" id="ai" aria-labelledby="ai-h">
+        <div class="container course-grid">
+          <div>
+            <h2 id="ai-h">Artificial Intelligence and Data</h2>
+            <p class="lead">Understand how machines learn from data, and how to use that power thoughtfully.</p>
+          </div>
+          <ul class="checks">
+            <li>Working with and visualizing data</li>
+            <li>Introductory machine learning</li>
+            <li>Using AI tools responsibly</li>
+            <li>Projects that answer real questions</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section course course--gold course--flip" id="design" aria-labelledby="design-h">
+        <div class="container course-grid">
+          <div>
+            <h2 id="design-h">Design and Animation</h2>
+            <p class="lead">Combine creativity with technique to make visuals, interfaces and stories that move.</p>
+          </div>
+          <ul class="checks">
+            <li>Design principles and visual storytelling</li>
+            <li>2D and 3D animation basics</li>
+            <li>Interface and experience design</li>
+            <li>Turning sketches into finished work</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <section class="section section--alt" id="workshops" aria-labelledby="workshops-h">
+      <div class="container">
+        <h2 id="workshops-h">Workshops and student projects</h2>
+        <p class="lead">Learning sticks when you make something. Workshops are short and focused; projects go further and end with something you can show.</p>
+        <div class="two-up">
+          <article class="panel">
+            <h3>Workshops</h3>
+            <p>Hands-on sessions that introduce a tool or idea and finish with a small working result.</p>
+          </article>
+          <article class="panel">
+            <h3>Student projects</h3>
+            <p>Longer builds where learners plan, prototype, test and present their own ideas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-h">
+      <div class="container split">
+        <div>
+          <h2 id="contact-h">Ready to start?</h2>
+          <p class="lead">Tell us what you want to explore and we will help you find your first step.</p>
+        </div>
+        <form class="form" id="contact-form" novalidate>
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+          <label for="f-interest">I'm interested in</label>
+          <select id="f-interest" name="interest">
+            <option>Robotics and IoT</option>
+            <option>Coding and Web Development</option>
+            <option>Artificial Intelligence and Data</option>
+            <option>Design and Animation</option>
+            <option>Not sure yet</option>
+          </select>
+          <button class="btn btn--primary" type="submit">Get Started</button>
+          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="wordmark">BEYCAN</span>
+      <p>Explore Beyond Imagination.</p>
+      <p class="footer-copy">&copy; <span id="year"></span> BEYCAN. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/frame-animation.js" defer></script>
+  <script src="js/preloader.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
